@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  user-service:
+    build:
+      context: ./Microservices/user-service
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - microservices-net
+
+  product-service:
+    build:
+      context: ./Microservices/product-service
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    networks:
+      - microservices-net
+
+  order-service:
+    build:
+      context: ./Microservices/order-service
+      dockerfile: Dockerfile
+    ports:
+      - "3002:3002"
+    networks:
+      - microservices-net
+
+  gateway-service:
+    build:
+      context: ./Microservices/gateway-service
+      dockerfile: Dockerfile
+    ports:
+      - "3003:3003"
+    networks:
+      - microservices-net
+
+networks:
+  microservices-net:
+    driver: bridge
+
