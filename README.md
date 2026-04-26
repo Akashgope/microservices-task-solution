@@ -1,4 +1,3 @@
-<img width="575" height="139" alt="Screenshot 2026-04-26 at 9 48 29 PM" src="https://github.com/user-attachments/assets/04bed3ff-d699-41ba-8d4a-59c2aec06fd1" /># Microservices-Task
 
 ## Overview
 This document provides details on testing various services after running the `docker-compose` file. These services include User, Product, Order, and Gateway Services. Each service has its own endpoints for testing purposes.
